@@ -1,7 +1,7 @@
 import BstSet as bst
 
 data = [23, 12, 37, 6, 15, 14, 7, 30, 32, 29, 29]
-# data = []
+# data = [4,2,6,1,3,5,7]
 
 print("\nProvided")
 bst = bst.BstSet()
@@ -19,18 +19,19 @@ print("count_internal", bst.count_internal())
 print("lr_inorder", bst.lr_inorder())
 print("rl_postorder", bst.rl_postorder())
 
-# print("dot printout")
-# print(bst.dot())
+print("dot printout")
+print(bst.dot())
 
-# print("\ndelete(6)", bst.delete(6))
-# print("delete(8)", bst.delete(8))
-# print("delete(37)", bst.delete(37))
-# print("delete(23)", bst.delete(23))
-# print("size", bst.size())
-# print("dot printout after delete")
-# print(bst.dot())
+print("\ndelete(6)", bst.delete(6))
+print("delete(8)", bst.delete(8))
+print("delete(37)", bst.delete(37))
+print("delete(23)", bst.delete(23))
+print("size", bst.size())
+print("dot printout after delete")
+print(bst.dot())
 
 print("\nVG Exercises")
 print("max_depth", bst.max_depth())
+
 # print("pretty dot printout")
 # print(bst.pretty_dot())
