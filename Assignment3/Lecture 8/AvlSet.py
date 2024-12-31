@@ -22,19 +22,19 @@ class AvlNode:
         return txt
 
     def add(self, val):
-        if val < self.value:
+        if val < self.value: # No duplicates
             if self.left is None:
-                self.left = AvlNode(val, None, None)
+                self.left = AvlNode(val, None, None)  # Add new node
             else:
-                self.left = self.left.add(val)
-        elif val > self.value:
-            if self.right is None:
-                self.right = AvlNode(val, None, None)
-            else:
-                self.right = self.right.add(val)
+                self.left = self.left.add(val)  # Update left child after rebalancing
+        elif val > self.value: # No duplicates
+            if self.right is None: 
+                self.right = AvlNode(val, None, None) # Add new node
+            else: 
+                self.right = self.right.add(val) # Update right child after rebalancing
 
         # Update height
-        self.height = 1 + max(self.get_height(self.left), self.get_height(self.right))
+        self.height = 1 + max(self.get_height(self.left), self.get_height(self.right))  
 
         # Rebalance the node if needed
         return self.rebalance()

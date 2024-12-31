@@ -9,7 +9,7 @@ def generate_random_bst(size):
     Returns the BST and the max depth of the tree.
     """
     bst = BstSet()
-    elements = random.sample(range(1, size * 10), size)  # Generate `size` unique random numbers
+    elements = random.sample(range(1, size * 10), size)  # Random elements from 1 to size * 10 (inclusive) without replacement 
     for elem in elements:
         bst.add(elem)
     return bst.max_depth()
@@ -20,9 +20,9 @@ def compute_mean_max_depth(sizes, runs=10):
     """
     mean_depths = []
     for size in sizes:
-        depths = [generate_random_bst(size) for _ in range(runs)]
-        mean_depth = sum(depths) / len(depths)
-        mean_depths.append(mean_depth)
+        depths = [generate_random_bst(size) for _ in range(runs)] # Generate random BSTs and get their max depths
+        mean_depth = sum(depths) / len(depths) 
+        mean_depths.append(mean_depth)  
     return mean_depths
 
 def complete_tree_depth(sizes):
@@ -63,5 +63,5 @@ def main():
     plt.grid(True)
     plt.show()
 
-if __name__ == "__main__":
-    main()
+
+main()
