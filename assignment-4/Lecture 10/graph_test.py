@@ -20,4 +20,25 @@ graph.addEdge(graph.getIndex("A"), graph.getIndex("E"))  # A -> E
 print("Vertices:", graph.getVertices())  # Should print: ['A', 'B', 'C', 'D', 'E']
 print("Size of graph:", graph.getSize())  # Should print: 5
 print("Degree of A:", graph.getDegree("A"))  # Should print: 3 (B, C, E are neighbors)
-print("Adjacency Lists:", graph.adjacencyLists)  # Should reflect all connections
+print("Adjacency Lists:", graph.getAdjacencyLists)  # Should reflect all connections
+
+# Print the edges
+print("Initial Edges:")
+graph.printEdges()
+
+# Clear the graph
+# graph.clear()
+# print("\nGraph after clear:")
+# print("Vertices:", graph.vertices)
+# print("Adjacency Lists:", graph.adjacencyLists)
+
+# Perform DFS starting from vertex A (index 0)
+dfs_tree = graph.dfs(graph.getIndex("A"))
+# Print the search order
+print("DFS Order:", [graph.getVertex(i) for i in dfs_tree.getSearchOrders()])
+
+# Perform BFS starting from vertex A (index 0)
+bfs_tree = graph.bfs(graph.getIndex("A"))
+
+# Print the BFS search order
+print("BFS Order:", [graph.getVertex(i) for i in bfs_tree.getSearchOrders()])
