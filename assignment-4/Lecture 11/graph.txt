@@ -1,0 +1,12 @@
+Lion: Tiger 3, Elephant 2, Zebra 4
+Tiger: Lion 3, Monkey 5, Panda 2
+Elephant: Lion 2, Giraffe 4, Rhino 6, Hippo 3
+Giraffe: Elephant 4, Zebra 5, Flamingo 2
+Zebra: Lion 4, Giraffe 5, Kangaroo 3
+Monkey: Tiger 5, Panda 4, Penguin 3
+Panda: Tiger 2, Monkey 4, Kangaroo 6, Flamingo 1
+Kangaroo: Zebra 3, Panda 6, Penguin 5
+Penguin: Monkey 3, Kangaroo 5, Flamingo 4
+Flamingo: Giraffe 2, Panda 1, Penguin 4
+Rhino: Elephant 6, Hippo 5
+Hippo: Elephant 3, Rhino 5
